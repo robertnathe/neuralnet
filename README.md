@@ -18,6 +18,14 @@ Safe Vector Allocation: Includes a utility function to prevent excessively large
 
 The program will train the neural network on a predefined dataset and then output the predictions for a test input.
 
+## Compilation
+
+### Compilation
+
+Compile the code using a C++ compiler that supports C++11 or later. For example, using g++:
+
+g++ -std=c++11 neuralnet.cpp -o neuralnet
+
 ## Code Structure
 
 `Network` struct: Defines the structure to hold the weights and biases of the neural network layers.
