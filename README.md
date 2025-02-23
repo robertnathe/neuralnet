@@ -102,4 +102,4 @@ Initialize the neural network.
 
 ## License
 
-Affero License
+GNU AFFERO GENERAL PUBLIC LICENSE
