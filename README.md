@@ -18,15 +18,19 @@ Safe Vector Allocation: Includes a utility function to prevent excessively large
 
 The program will train the neural network on a predefined dataset and then output the predictions for a test input.
 
-## Compilation
-
 ### Compilation
 
 Compile the code using a C++ compiler that supports C++11 or later. For example, using g++:
 
 g++ -std=c++11 neuralnet.cpp -o neuralnet
 
-## Code Structure
+### Execution
+
+Run the compiled executable: ./neuralnet
+
+The program will train the neural network on a predefined dataset and then output the predictions for a test input.
+
+### Code Structure
 
 `Network` struct: Defines the structure to hold the weights and biases of the neural network layers.
 
@@ -82,7 +86,7 @@ ReLU (Rectified Linear Unit): Applied to the hidden layers.
     
   Softmax: Applied to the output layer to obtain probability distributions for multi-class classification.
 
-## Example
+### Example
 
 The `main` function demonstrates how to:
 
@@ -94,7 +98,7 @@ Initialize the neural network.
 
   Make predictions on a test input using the `predict` function.
 
-## Future Enhancements
+### Future Enhancements
 
   Mini-Batch Gradient Descent: Implement mini-batch gradient descent to improve training efficiency.
   
@@ -108,6 +112,6 @@ Initialize the neural network.
   
   Evaluation Metrics: Include evaluation metrics such as accuracy, precision, recall, and F1-score.
 
-## License
+### License
 
 GNU AFFERO GENERAL PUBLIC LICENSE
