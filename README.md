@@ -5,10 +5,15 @@ This project implements a feedforward neural network in C++ with two hidden laye
 ## Features
 
 Multi-Layer Architecture: Implements a feedforward neural network with an input layer, two hidden layers, and an output layer.
+
 ReLU Activation: Uses the Rectified Linear Unit (ReLU) activation function for hidden layers.
+
 Softmax Output: Applies the Softmax function to the output layer for multi-class classification.
+
 Backpropagation Training: Trains the network using the backpropagation algorithm with gradient descent.
+
 Weight Initialization: Initializes weights using a normal distribution with a He initialization strategy.
+
 Safe Vector Allocation: Includes a utility function to prevent excessively large vector allocations that could lead to errors.
 
 The program will train the neural network on a predefined dataset and then output the predictions for a test input.
