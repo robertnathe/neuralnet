@@ -1,4 +1,4 @@
-# Feedforward Neural Network in C++
+# Feedforward Neural Network in C++ and Python
 
 This project implements a feedforward neural network in C++ and Python with two hidden layers. It includes functionalities for network initialization, training, and prediction using the backpropagation algorithm.
 
