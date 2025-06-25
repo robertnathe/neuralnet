@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 This is a Python implementation of a neural network with two hidden layers. The network is trained using stochastic gradient descent with mini-batches and is designed to classify input data into one of three categories.
 
