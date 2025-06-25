@@ -1,116 +1,52 @@
 # Feedforward Neural Network in C++ and Python
 
-This project implements a feedforward neural network in C++ and Python with two hidden layers. It includes functionalities for network initialization, training, and prediction using the backpropagation algorithm.
+## Introduction
 
-## Features
+This is a Python implementation of a neural network with two hidden layers. The network is trained using stochastic gradient descent with mini-batches and is designed to classify input data into one of three categories.
 
-Multi-Layer Architecture: Implements a feedforward neural network with an input layer, two hidden layers, and an output layer.
+## Network Architecture
 
-ReLU Activation: Uses the Rectified Linear Unit (ReLU) activation function for hidden layers.
+The network consists of the following layers:
 
-Softmax Output: Applies the Softmax function to the output layer for multi-class classification.
+* Input layer with 3 neurons
+* Hidden layer 1 with 20 neurons
+* Hidden layer 2 with 15 neurons
+* Output layer with 3 neurons
 
-Backpropagation Training: Trains the network using the backpropagation algorithm with gradient descent.
+The network uses the ReLU activation function for the hidden layers and the softmax activation function for the output layer.
 
-Weight Initialization: Initializes weights using a normal distribution with a He initialization strategy.
+## Training
 
-Safe Vector Allocation: Includes a utility function to prevent excessively large vector allocations that could lead to errors.
+The network is trained using stochastic gradient descent with mini-batches. The training data consists of 10 input samples, each with 3 features, and their corresponding target values.
 
-The program will train the neural network on a predefined dataset and then output the predictions for a test input.
+## Usage
 
-### Compilation
+To use this code, simply run the `neuralnet.py` file. The network will be trained on the provided training data and then tested on a sample input.
 
-Compile the code using a C++ compiler that supports C++11 or later. For example, using g++:
+## Functions
 
-g++ -std=c++11 neuralnet.cpp -o neuralnet
+The code consists of the following functions:
 
-### Execution
+* `relu(x)`: The ReLU activation function.
+* `relu_derivative(x)`: The derivative of the ReLU activation function.
+* `softmax(z)`: The softmax activation function.
+* `initialize_weights(size, fan_in)`: Initializes weights using He initialization.
+* `initialize_network(input_size, hidden1_size, hidden2_size, output_size, network)`: Initializes all weights and biases for the neural network.
+* `train_network(inputs, targets, hidden1_size, hidden2_size, output_size, network, epochs, learning_rate, batch_size=5)`: Trains the neural network using stochastic gradient descent with mini-batches.
+* `predict(network, input_data, hidden1_size, hidden2_size, output_size)`: Performs a forward pass through the network to get predictions for a single input.
+* `prepare_data()`: Prepares a sample dataset for training and testing the network.
 
-Run the compiled executable: ./neuralnet
+## Requirements
 
-The program will train the neural network on a predefined dataset and then output the predictions for a test input.
+This code requires the following libraries:
 
-### Code Structure
+* `math`
+* `random`
+* `numpy`
 
-`Network` struct: Defines the structure to hold the weights and biases of the neural network layers.
+## Notes
 
-`safe_vector` template function: A utility function to safely allocate vectors, preventing potential overflow issues.
-
-`relu` and `relu_derivative` functions: Implement the ReLU activation function and its derivative.
-
-`softmax` function: Implements the Softmax function for the output layer.
-
-`initialize_weights` function: Initializes the weights of the network layers using a normal distribution.
-
-`initialize_network` function: Initializes the entire network with the specified layer sizes.
-
-`train_network` function: Implements the backpropagation algorithm to train the neural network.
-
-`predict` function: Performs a forward pass through the network to generate predictions.
-
-`prepare_data` function: Sets up the training data with sample inputs and targets.
-
-`main` function: The main entry point of the program, which sets up the network, trains it, and tests it with a sample input.
-
-### Network Architecture
-
-The network consists of three layers:
-
-1.  Input Layer: Size is determined by the input data.
-2.  Hidden Layer 1: Size is configurable (e.g., 20 neurons).
-3.  Hidden Layer 2: Size is configurable (e.g., 15 neurons).
-4.  Output Layer: Size is determined by the number of classes in the classification problem.
-
-### Weight Initialization
-
-Weights are initialized using a normal distribution with a mean of 0 and a standard deviation calculated based on the He initialization strategy:
-
-std = sqrt(2.0 / fan_in)
-
-where `fan_in` is the number of inputs to the layer.
-
-### Training
-
-The network is trained using the backpropagation algorithm.  The key steps include:
-
-1.  Forward Pass: Propagate the input through the network to compute the output.
-2.  Error Calculation: Compute the error between the predicted output and the target.
-3.  Backward Pass: Propagate the error backward through the network to compute the gradients.
-4.  Weight Update: Update the weights and biases using gradient descent.
-
-### Activation Functions
-
-ReLU (Rectified Linear Unit): Applied to the hidden layers.
-    
-  f(x) = max(0, x)
-    
-  Softmax: Applied to the output layer to obtain probability distributions for multi-class classification.
-
-### Example
-
-The `main` function demonstrates how to:
-
-Initialize the neural network.
-
-  Prepare the training data.
-
-  Train the network using the `train_network` function.
-
-  Make predictions on a test input using the `predict` function.
-
-### Future Enhancements
-
-  Mini-Batch Gradient Descent: Implement mini-batch gradient descent to improve training efficiency.
-  
-  More Activation Functions: Add support for other activation functions like sigmoid and tanh.
-  
-  Regularization: Implement regularization techniques like L1 or L2 regularization to prevent overfitting.
-  
-  Optimization Algorithms: Implement more advanced optimization algorithms like Adam or RMSprop.
-  
-  Data Loading: Add functionality to load data from files.
-  
-  Evaluation Metrics: Include evaluation metrics such as accuracy, precision, recall, and F1-score.
+This is a basic implementation of a neural network and is intended for educational purposes only. The network architecture and training parameters may need to be adjusted for specific use cases.
 
 ### License
 
