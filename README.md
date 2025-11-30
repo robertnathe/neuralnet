@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a Python implementation of a neural network with two hidden layers. The network is trained using stochastic gradient descent with mini-batches and is designed to classify input data into one of three categories.
+This is an implementation of a neural network with two hidden layers in Python and C++. The network is trained using stochastic gradient descent with mini-batches and is designed to classify input data into one of three categories.
 
 ## Network Architecture
 
@@ -19,7 +19,7 @@ The network is trained using stochastic gradient descent with mini-batches. The 
 
 ## Usage
 
-To use this code, simply run the `neuralnet.py` file. The network will be trained on the provided training data and then tested on a sample input.
+To use this code, simply run the `vectorized_nn_module.py` file. The network will be trained on the provided training data and then tested on a sample input.
 
 ## Functions
 
